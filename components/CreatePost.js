@@ -12,7 +12,7 @@ const CreatePost = () => {
         <div className="mt-8 pt-4  
         flex w-full items-center p-3 rounded-[1rem] mx-auto">
             <div className="w-14 h-14 shrink-0">
-              <Image src={guy} className="rounded-full" />
+              <Image src={guy} className="rounded-full" alt="photo" />
             </div>
             <div className="flex items-center ml-5 w-full">
             <input type="text" placeholder="Whats on your mind John"
@@ -27,19 +27,19 @@ const CreatePost = () => {
             ">
                 <div className="flex items-center">
                 <div className="w-7 h-7">
-                    <Image src={camera} />
+                    <Image src={camera} alt="photo" />
                 </div>
                 <p className="whitespace-nowrap text-[16px] pl-2">Live Video</p>
                 </div>
                 <div className="flex items-center">
                 <div className="w-7 h-7">
-                    <Image src={photos} />
+                    <Image src={photos} alt="photo" />
                 </div>
                 <p className="pl-2">Photo/Video</p>
                 </div>
                 <div className="flex items-center">
                 <div className="w-7 h-7">
-                    <Image src={smile} />
+                    <Image src={smile} alt="photo" />
                 </div>  
                 <p className="pl-2">Feeling/Activity</p>
                 </div>

@@ -18,7 +18,7 @@ const Header = () => {
 
         <div className="flex items-center mr-4">
             <div className='w-10 h-10'>
-                <Image src={facebook} />
+                <Image src={facebook} alt="photo" />
             </div>
             <div className="ml-2">
                 <input type="text" placeholder="Search Facebook"
@@ -47,7 +47,7 @@ const Header = () => {
             <AiOutlineMessage className="w-9 h-9" />
         </div>
         <div className="w-10 h-10" >
-            <Image src={user} className="rounded-full" />
+            <Image src={user} className="rounded-full" alt="photo" />
         
         
         </div>
