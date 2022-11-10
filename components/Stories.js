@@ -25,7 +25,7 @@ const Stories = () => {
      m-1 mx-2 mt-4 sm:mt-8">
     <div className="w-full flex justify-between space-x-4 p-1
     px-2 mx-auto max-w-[25rem] sm:max-w-[33rem] bg-white  rounded-[1rem]">
-        {stories.map((story) => (
+        {stories.map((story) => (   
             <div className="relative flex w-[4.5rem] h-32 sm:w-24 sm:0h-40 rounded-[1rem]">
                 <div className="flex">
                      <Image src={story.background} alt="photo"

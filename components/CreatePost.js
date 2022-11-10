@@ -29,7 +29,7 @@ const CreatePost = () => {
                 <div className="w-7 h-7">
                     <Image src={camera} alt="photo" />
                 </div>
-                <p className="whitespace-nowrap text-[16px] pl-2">Live Video</p>
+                <p className="whitespace-nowrap text-[14px] pl-2">Live Video</p>
                 </div>
                 <div className="flex items-center">
                 <div className="w-7 h-7">
@@ -41,7 +41,7 @@ const CreatePost = () => {
                 <div className="w-7 h-7">
                     <Image src={smile} alt="photo" />
                 </div>  
-                <p className="pl-2">Feeling/Activity</p>
+                <p className="pl-2 text-[14px]">Feeling/Activity</p>
                 </div>
 
             </div>
