@@ -40,7 +40,7 @@ const RightSidebar = () => {
             </div>
             <div className="space-y-4 mt-4">
                 {profiles.map((profile) => (
-                    <div className="flex items-center">
+                    <div key={profile.name} className="flex items-center">
                     <div className="relative flex w-12 h-12">
                         <img src={profile.photo.src}
                         className="object-cover rounded-full" />

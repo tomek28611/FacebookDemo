@@ -14,11 +14,11 @@ import Image from "next/image";
 
 const Stories = () => {
     const stories = [
-        { profile: therock, background: therock20 },
-        { profile: mikeprofile, background: mike },
-        { profile: mrbeast, background: mrbeastbackground },
-        { profile: kobe, background: kobebackground },
-        { profile: arnold, background: arnoldbackground },
+        { profile: therock, background: therock20, uid:'1' },
+        { profile: mikeprofile, background: mike, uid:'2' },
+        { profile: mrbeast, background: mrbeastbackground, uid:'3' },
+        { profile: kobe, background: kobebackground, uid:'4' },
+        { profile: arnold, background: arnoldbackground, uid:'5' },
     ];
   return (
     <div className="flex items-center w-screen sm:w-full h-40  
@@ -26,7 +26,7 @@ const Stories = () => {
     <div className="w-full flex justify-between space-x-4 p-1
     px-2 mx-auto max-w-[25rem] sm:max-w-[33rem] bg-white  rounded-[1rem]">
         {stories.map((story) => (   
-            <div className="relative flex w-[4.5rem] h-32 sm:w-24 sm:0h-40 rounded-[1rem]">
+            <div key={story.uid} className="relative flex w-[4.5rem] h-32 sm:w-24 sm:0h-40 rounded-[1rem]">
                 <div className="flex">
                      <Image src={story.background} alt="photo"
                      className="flex object-cover rounded-[1rem]" />
