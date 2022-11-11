@@ -6,7 +6,7 @@ import { RiArrowDownSLine } from "react-icons/ri";
 import { AiOutlineDesktop, AiFillClockCircle } from "react-icons/ai";
 import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
-
+import nouser from "../assets/nouser.png";
 
 
 const LeftSidebar = () => {
