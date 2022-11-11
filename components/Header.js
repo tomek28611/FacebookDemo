@@ -9,8 +9,12 @@ import { BsCart3 } from "react-icons/bs";
 import { GrGroup, GrAppsRounded } from "react-icons/gr";
 import { FaBell } from "react-icons/fa";
 import { AiOutlineMessage } from "react-icons/ai";
+import { useSession, signIn, signOut } from "next-auth/react";
+
+
 
 const Header = () => {
+    const { data: session } = useSession();
   return (
     <div className="p-3 flex items-center justify-between border-b  lg:px-8">
 
@@ -47,7 +51,7 @@ const Header = () => {
             <AiOutlineMessage className="w-9 h-9" />
         </div>
         <div className="w-10 h-10" >
-            <Image src={user} className="rounded-full" alt="photo" />
+            <img src={session?.user?.image} className="rounded-full" alt="photo" />
         
         
         </div>

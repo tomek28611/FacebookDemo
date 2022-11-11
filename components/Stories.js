@@ -11,20 +11,38 @@ import kobe from "../assets/1kobe.webp";
 import arnoldbackground from "../assets/arnoldbackground.webp";
 import arnold from "../assets/1arnold.jpg";
 import Image from "next/image";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const Stories = () => {
+    const { data: session } = useSession();
     const stories = [
-        { profile: therock, background: therock20, uid:'1' },
+        { profile: arnold, background: arnoldbackground, uid:'1' },
         { profile: mikeprofile, background: mike, uid:'2' },
         { profile: mrbeast, background: mrbeastbackground, uid:'3' },
         { profile: kobe, background: kobebackground, uid:'4' },
-        { profile: arnold, background: arnoldbackground, uid:'5' },
+     
     ];
   return (
     <div className="flex items-center w-screen sm:w-full h-40  
      m-1 mx-2 mt-4 sm:mt-8">
     <div className="w-full flex justify-between space-x-4 p-1
     px-2 mx-auto max-w-[25rem] sm:max-w-[33rem] bg-white  rounded-[1rem]">
+
+
+        {/* My Story */}
+            <div 
+            // key={story.uid}
+             className="relative flex w-[4.5rem] h-32 sm:w-24 sm:0h-40 rounded-[1rem]">
+                <div className="flex">
+                     <img src={session?.user?.image} alt="photo"
+                     className="flex object-cover rounded-[1rem]" />
+                     <div className="flex absolute top-1 left-1 w-9 h-9 p-1 bg-blue-500 rounded-full">
+                     <img src={session?.user?.image} className="rounded-full object-cover" alt="photo" />
+                     </div>
+                </div>
+            </div>
+
+        {/* celeb stories */}
         {stories.map((story) => (   
             <div key={story.uid} className="relative flex w-[4.5rem] h-32 sm:w-24 sm:0h-40 rounded-[1rem]">
                 <div className="flex">

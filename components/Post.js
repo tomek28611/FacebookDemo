@@ -14,20 +14,22 @@ import Image from "next/image";
 import bluelike from "../assets/25like.png";
 import blacklike from "../assets/2unlike.png";
 import nouser from "../assets/nouser.png";
+import Moment from 'react-moment';
 
-const Post = () => {
+const Post = ({id, username, userImg, caption, timestamp, img}) => {
   return (
-    <div className="bg-white rounded-[1rem] px-5 py-4">
+    <div className="bg-white rounded-[1rem] px-5 py-4 mt-4">
     {/* Header */}
     <div className="flex items-center justify-between">
         <div className="flex items-center   ">
         <div className="w-12 h-12">
-            <Image src={guy} className="rounded-full" alt="photo"   />
+            <img src={userImg} className="rounded-full" alt="photo"   />
         </div>
         <div className=" ml-3">
-        <p className="font-bold">John Doe</p>
+        <p className="font-bold">{username}</p>
         <div className="flex">
-        <p className="text-xs">3 hours ago  </p>
+        <p className="text-xs">
+            <Moment fromNow>{timestamp?.toDate()}</Moment>  </p>
         <BiWorld className="ml-2 shrink-0" />
         </div>
         </div>
@@ -38,11 +40,11 @@ const Post = () => {
     </div>
     {/* Input */}
     <div className="mt-3 mb-2">
-        <p>My new car</p>
+        <p>{caption}</p>
     </div>
     {/* Image */}
     <div className="-mx-5">
-        <Image src={car} />
+        <img src={img} />
     </div>
     {/* Number of Likes + Btn */}
     <div className="">
