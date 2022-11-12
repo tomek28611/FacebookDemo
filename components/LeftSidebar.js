@@ -18,11 +18,11 @@ const LeftSidebar = () => {
               <MdHome className="w-9 h-9" />
               <p className="ml-2">Home</p>
             </div>
-            <div className="flex items-center mt-4">
+            <div className="flex items-center mt-4" onClick={signIn}>
             <div className="w-10 h-10 shrink-0">
-                <img src={session?.user?.image} className="rounded-full" alt="photo" />
+                <img src={session ? session?.user?.image : nouser.src} className="rounded-full" alt="photo" />
              </div>
-             <p className="ml-2 font-bold">{session?.user?.name}</p>
+             <p className="ml-2 font-bold">{session ? session?.user?.name : "Log In"}</p>
              </div>
        
              <div className="border-b my-4"></div>

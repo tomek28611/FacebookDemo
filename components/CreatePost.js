@@ -8,6 +8,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { addDoc, collection, doc, serverTimestamp, updateDoc } from "firebase/firestore";
 import { db, storage } from "../firebase";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
+import nouser from "../assets/nouser.png";
 
 const CreatePost = () => {
     const { data: session } = useSession();
@@ -59,7 +60,7 @@ const CreatePost = () => {
         <div className="mt-8 pt-4  
         flex w-full items-center p-3 rounded-[1rem] mx-auto">
             <div className="w-14 h-14 shrink-0">
-              <img src={session?.user?.image} className="rounded-full" alt="photo" />
+              <img src={session ? session?.user?.image : nouser.src} className="rounded-full" alt="photo" />
             </div>
             <div className="flex items-center ml-5 w-full">
             <input type="text" placeholder="Whats on your mind"

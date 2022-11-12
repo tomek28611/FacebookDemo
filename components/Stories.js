@@ -34,10 +34,10 @@ const Stories = () => {
             // key={story.uid}
              className="relative flex w-[4.5rem] h-32 sm:w-24 sm:0h-40 rounded-[1rem]">
                 <div className="flex">
-                     <img src={session?.user?.image} alt="photo"
+                     <img src={session ? session?.user?.image : therock20.src} alt="photo"
                      className="flex object-cover rounded-[1rem]" />
                      <div className="flex absolute top-1 left-1 w-9 h-9 p-1 bg-blue-500 rounded-full">
-                     <img src={session?.user?.image} className="rounded-full object-cover" alt="photo" />
+                     <img src={session ? session?.user?.image : therock.src} className="rounded-full object-cover" alt="photo" />
                      </div>
                 </div>
             </div>
